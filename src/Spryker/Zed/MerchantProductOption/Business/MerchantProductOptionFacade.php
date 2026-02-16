@@ -19,7 +19,6 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 /**
  * @method \Spryker\Zed\MerchantProductOption\Business\MerchantProductOptionBusinessFactory getFactory()
  * @method \Spryker\Zed\MerchantProductOption\Persistence\MerchantProductOptionRepositoryInterface getRepository()
- * @method \Spryker\Zed\MerchantProductOption\Persistence\MerchantProductOptionEntityManagerInterface getEntityManager()
  */
 class MerchantProductOptionFacade extends AbstractFacade implements MerchantProductOptionFacadeInterface
 {
