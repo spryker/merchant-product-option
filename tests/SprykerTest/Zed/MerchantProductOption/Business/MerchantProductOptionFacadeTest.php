@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Spryker Marketplace License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Shared\MerchantProductOption\Business;
+namespace SprykerTest\Zed\MerchantProductOption\Business;
 
 use ArrayObject;
 use Codeception\Test\Unit;
@@ -25,7 +25,7 @@ use Spryker\Zed\MerchantProductOption\MerchantProductOptionConfig;
  * Auto-generated group annotations
  *
  * @group SprykerTest
- * @group Shared
+ * @group Zed
  * @group MerchantProductOption
  * @group Business
  * @group Facade
