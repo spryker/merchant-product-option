@@ -14,12 +14,6 @@ use Propel\Runtime\Collection\Collection;
 
 class MerchantProductOptionGroupMapper
 {
-    /**
-     * @param \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroup $merchantProductOptionGroupEntity
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupTransfer $merchantProductOptionGroupTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantProductOptionGroupTransfer
-     */
     public function mapMerchantProductOptionGroupEntityToMerchantProductOptionGroupTransfer(
         SpyMerchantProductOptionGroup $merchantProductOptionGroupEntity,
         MerchantProductOptionGroupTransfer $merchantProductOptionGroupTransfer

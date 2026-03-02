@@ -21,9 +21,6 @@ use Spryker\Zed\MerchantProductOption\MerchantProductOptionDependencyProvider;
  */
 class MerchantProductOptionBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantProductOption\Business\Validator\MerchantProductOption\MerchantProductOptionValidatorInterface
-     */
     public function createMerchantProductOptionValidator(): MerchantProductOptionValidatorInterface
     {
         return new MerchantProductOptionValidator(
@@ -31,9 +28,6 @@ class MerchantProductOptionBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantProductOption\Business\Expander\ProductOption\ProductOptionGroupExpanderInterface
-     */
     public function createProductOptionGroupExpander(): ProductOptionGroupExpanderInterface
     {
         return new ProductOptionGroupExpander(
@@ -42,9 +36,6 @@ class MerchantProductOptionBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantProductOption\Dependency\Facade\MerchantProductOptionToMerchantFacadeInterface
-     */
     public function getMerchantFacade(): MerchantProductOptionToMerchantFacadeInterface
     {
         return $this->getProvidedDependency(MerchantProductOptionDependencyProvider::FACADE_MERCHANT);

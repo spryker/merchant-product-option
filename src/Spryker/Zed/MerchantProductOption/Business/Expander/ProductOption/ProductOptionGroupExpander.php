@@ -26,10 +26,6 @@ class ProductOptionGroupExpander implements ProductOptionGroupExpanderInterface
      */
     protected $merchantFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOption\Persistence\MerchantProductOptionRepositoryInterface $merchantProductOptionRepository
-     * @param \Spryker\Zed\MerchantProductOption\Dependency\Facade\MerchantProductOptionToMerchantFacadeInterface $merchantFacade
-     */
     public function __construct(
         MerchantProductOptionRepositoryInterface $merchantProductOptionRepository,
         MerchantProductOptionToMerchantFacadeInterface $merchantFacade
@@ -38,11 +34,6 @@ class ProductOptionGroupExpander implements ProductOptionGroupExpanderInterface
         $this->merchantFacade = $merchantFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOptionGroupTransfer $productOptionGroupTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOptionGroupTransfer
-     */
     public function expandProductOptionGroup(ProductOptionGroupTransfer $productOptionGroupTransfer): ProductOptionGroupTransfer
     {
         if ($productOptionGroupTransfer->getIdProductOptionGroup() === null) {

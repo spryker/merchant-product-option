@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductOptionGroupTransfer;
 
 interface ProductOptionGroupExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOptionGroupTransfer $productOptionGroupTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOptionGroupTransfer
-     */
     public function expandProductOptionGroup(ProductOptionGroupTransfer $productOptionGroupTransfer): ProductOptionGroupTransfer;
 }

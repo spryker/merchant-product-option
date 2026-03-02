@@ -66,11 +66,6 @@ class MerchantProductOptionRepository extends AbstractRepository implements Merc
             ->getData();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantProductOptionGroupCollectionTransfer
-     */
     public function getMerchantProductOptionGroupCollection(
         MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
     ): MerchantProductOptionGroupCollectionTransfer {
@@ -124,12 +119,6 @@ class MerchantProductOptionRepository extends AbstractRepository implements Merc
         return $merchantProductOptionGroupQuery;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
-     * @param \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery $merchantProductOptionGroupQuery
-     *
-     * @return \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery
-     */
     protected function applyMerchantProductOptionGroupFilters(
         MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer,
         SpyMerchantProductOptionGroupQuery $merchantProductOptionGroupQuery
@@ -148,12 +137,6 @@ class MerchantProductOptionRepository extends AbstractRepository implements Merc
         return $merchantProductOptionGroupQuery;
     }
 
-    /**
-     * @param \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery $merchantProductOptionGroupQuery
-     * @param \Generated\Shared\Transfer\PaginationTransfer $paginationTransfer
-     *
-     * @return \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery
-     */
     protected function applyMerchantProductOptionGroupPagination(
         SpyMerchantProductOptionGroupQuery $merchantProductOptionGroupQuery,
         PaginationTransfer $paginationTransfer

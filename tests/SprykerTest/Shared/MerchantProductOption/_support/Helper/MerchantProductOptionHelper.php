@@ -15,11 +15,6 @@ use SprykerTest\Shared\ProductOption\Helper\ProductOptionGroupDataHelper;
 
 class MerchantProductOptionHelper extends Module
 {
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\MerchantProductOptionGroupTransfer
-     */
     public function haveMerchantProductOptionGroup(array $seedData = []): MerchantProductOptionGroupTransfer
     {
         $merchantProductOptionGroupTransfer = (new MerchantProductOptionGroupBuilder($seedData))->build();
@@ -36,9 +31,6 @@ class MerchantProductOptionHelper extends Module
         return $merchantProductOptionGroupTransfer->fromArray($merchantProductOptionGroupEntity->toArray(), true);
     }
 
-    /**
-     * @return \SprykerTest\Shared\ProductOption\Helper\ProductOptionGroupDataHelper
-     */
     protected function getProductOptionGroupDataHelper(): ProductOptionGroupDataHelper
     {
         /** @var \SprykerTest\Shared\ProductOption\Helper\ProductOptionGroupDataHelper $productOptionGroupDataHelper */

@@ -39,19 +39,11 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
      */
     protected $merchantProductOptionRepository;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOption\Persistence\MerchantProductOptionRepositoryInterface $merchantProductOptionRepository
-     */
     public function __construct(MerchantProductOptionRepositoryInterface $merchantProductOptionRepository)
     {
         $this->merchantProductOptionRepository = $merchantProductOptionRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartChangeTransfer $cartChangeTransfer
-     *
-     * @return \Generated\Shared\Transfer\CartPreCheckResponseTransfer
-     */
     public function validateMerchantProductOptionsInCart(CartChangeTransfer $cartChangeTransfer): CartPreCheckResponseTransfer
     {
         $cartPreCheckResponseTransfer = (new CartPreCheckResponseTransfer())
@@ -86,12 +78,6 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
         return $cartPreCheckResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-     */
     public function validateMerchantProductOptionsOnCheckout(
         QuoteTransfer $quoteTransfer,
         CheckoutResponseTransfer $checkoutResponseTransfer
@@ -231,11 +217,6 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
         return $checkoutResponseTransfer;
     }
 
-    /**
-     * @param string $translationKey
-     *
-     * @return \Generated\Shared\Transfer\MessageTransfer
-     */
     protected function createViolationMessage(string $translationKey): MessageTransfer
     {
         $messageTransfer = new MessageTransfer();
@@ -244,11 +225,6 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
         return $messageTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-     */
     protected function updateCheckoutResponseTransferStatus(CheckoutResponseTransfer $checkoutResponseTransfer): CheckoutResponseTransfer
     {
         if ($checkoutResponseTransfer->getIsSuccess() === false) {

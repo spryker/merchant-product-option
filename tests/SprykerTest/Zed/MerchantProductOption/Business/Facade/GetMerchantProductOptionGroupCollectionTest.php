@@ -36,9 +36,6 @@ class GetMerchantProductOptionGroupCollectionTest extends Unit
      */
     protected MerchantProductOptionBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testGetMerchantProductOptionGroupCollectionReturnsEmptyCollectionWhileNoCriteriaMatched(): void
     {
         // Arrange
@@ -57,9 +54,6 @@ class GetMerchantProductOptionGroupCollectionTest extends Unit
         $this->assertCount(0, $merchantProductOptionGroupCollectionTransfer->getMerchantProductOptionGroups());
     }
 
-    /**
-     * @return void
-     */
     public function testGetMerchantProductOptionGroupCollectionReturnsCollectionWithOneMerchantProductOptionGroupWhileProductOptionGroupIdCriteriaMatched(): void
     {
         // Arrange
@@ -83,9 +77,6 @@ class GetMerchantProductOptionGroupCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetMerchantProductOptionGroupCollectionReturnsCollectionWithFiveMerchantProductOptionGroupsWhileHavingLimitOffsetPaginationApplied(): void
     {
         // Arrange

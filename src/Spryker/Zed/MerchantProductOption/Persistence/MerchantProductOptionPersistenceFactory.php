@@ -17,9 +17,6 @@ use Spryker\Zed\MerchantProductOption\Persistence\Mapper\MerchantProductOptionGr
  */
 class MerchantProductOptionPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantProductOption\Persistence\Mapper\MerchantProductOptionGroupMapper
-     */
     public function createMerchantProductOptionGroupMapper(): MerchantProductOptionGroupMapper
     {
         return new MerchantProductOptionGroupMapper();

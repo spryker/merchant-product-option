@@ -30,11 +30,6 @@ interface MerchantProductOptionRepositoryInterface
      */
     public function getProductOptionGroupIdsWithNotApprovedMerchantGroups(array $productOptionGroupIds): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantProductOptionGroupCollectionTransfer
-     */
     public function getMerchantProductOptionGroupCollection(
         MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
     ): MerchantProductOptionGroupCollectionTransfer;

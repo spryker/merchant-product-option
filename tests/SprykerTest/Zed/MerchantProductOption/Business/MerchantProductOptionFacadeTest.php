@@ -39,9 +39,6 @@ class MerchantProductOptionFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetGrpoupsEmptyCollectionSuccess(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(0, $merchantProductOptionGroupCollectionTransfer->getMerchantProductOptionGroups());
     }
 
-    /**
-     * @return void
-     */
     public function testGetGroupsNotEmptyCollectionSuccess(): void
     {
         // Arrange
@@ -79,9 +73,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(2, $merchantProductOptionGroupCollectionTransfer->getMerchantProductOptionGroups());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateMerchantProductOptionsInCartSuccess(): void
     {
         // Arrange
@@ -102,9 +93,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(0, $cartPreCheckResponseTransfer->getMessages());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateMerchantProductOptionsInCartFailed(): void
     {
         // Arrange
@@ -125,9 +113,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(1, $cartPreCheckResponseTransfer->getMessages());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateMerchantProductOptionsOnCheckoutReturnsTrueForApprovedGroup(): void
     {
         // Arrange
@@ -152,9 +137,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(0, $checkoutResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateMerchantProductOptionsOnCheckoutReturnsFalseForNotApprovedGroup(): void
     {
         // Arrange
@@ -179,9 +161,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertCount(1, $checkoutResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductOptionGroupWithMerchantData(): void
     {
         // Arrange
@@ -205,9 +184,6 @@ class MerchantProductOptionFacadeTest extends Unit
         $this->assertSame($productOptionGroupTransfer->getMerchant()->getMerchantReference(), $merchantProductOptionGroupTransfer->getMerchantReference());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateMerchantProductOptionsOnCheckoutReturnsFalseWhenErrorProvidedAtTheBeginning(): void
     {
         // Arrange

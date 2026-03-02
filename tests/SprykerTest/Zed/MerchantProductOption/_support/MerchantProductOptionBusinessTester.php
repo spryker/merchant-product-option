@@ -30,17 +30,11 @@ class MerchantProductOptionBusinessTester extends Actor
 {
     use _generated\MerchantProductOptionBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureMerchantProductOptionGroupTableEmpty(): void
     {
         $this->createMerchantProductOptionGroupPropelQuery()->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\MerchantProductOption\Persistence\SpyMerchantProductOptionGroupQuery
-     */
     public function createMerchantProductOptionGroupPropelQuery(): SpyMerchantProductOptionGroupQuery
     {
         return SpyMerchantProductOptionGroupQuery::create();
