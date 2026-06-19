@@ -25,6 +25,7 @@ class MerchantProductOptionBusinessFactory extends AbstractBusinessFactory
     {
         return new MerchantProductOptionValidator(
             $this->getRepository(),
+            $this->getConfig(),
         );
     }
 

@@ -15,6 +15,7 @@ use Generated\Shared\Transfer\CheckoutResponseTransfer;
 use Generated\Shared\Transfer\ItemTransfer;
 use Generated\Shared\Transfer\MessageTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Zed\MerchantProductOption\MerchantProductOptionConfig;
 use Spryker\Zed\MerchantProductOption\Persistence\MerchantProductOptionRepositoryInterface;
 
 class MerchantProductOptionValidator implements MerchantProductOptionValidatorInterface
@@ -39,8 +40,10 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
      */
     protected $merchantProductOptionRepository;
 
-    public function __construct(MerchantProductOptionRepositoryInterface $merchantProductOptionRepository)
-    {
+    public function __construct(
+        MerchantProductOptionRepositoryInterface $merchantProductOptionRepository,
+        protected MerchantProductOptionConfig $merchantProductOptionConfig
+    ) {
         $this->merchantProductOptionRepository = $merchantProductOptionRepository;
     }
 
@@ -207,7 +210,9 @@ class MerchantProductOptionValidator implements MerchantProductOptionValidatorIn
                 ->setMessage(static::MESSAGE_ERROR_CHECKOUT_ITEM_OPTION_PRE_CONDITION)
                 ->setParameters([
                     static::MESSAGE_PARAM_NAME => $itemTransfer->getName(),
-                ]);
+                ])
+                ->setErrorType($this->merchantProductOptionConfig->getCheckoutErrorType())
+                ->setGroupKey($itemTransfer->getGroupKey());
 
             $checkoutResponseTransfer
                 ->addError($checkoutErrorTransfer)
